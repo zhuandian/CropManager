@@ -7,19 +7,45 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/et_crop_name"
-        android:layout_width="match_parent"
+    <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="15dp" />
+        android:text="从传感器收到的值PH值为：" />
 
     <TextView
+        android:id="@+id/tv_ph_level"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/tv_refresh_ph"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="查询"
+        android:text="刷新PH值"
+        android:textColor="#fff" />
+
+    <EditText
+        android:id="@+id/et_crop_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:hint="根据上述ph值，请输入您想要查询的农作物名称"
+        android:textSize="13sp" />
+
+    <TextView
+        android:id="@+id/tv_search"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:text="查询施肥方案"
         android:textColor="#fff" />
 </LinearLayout>

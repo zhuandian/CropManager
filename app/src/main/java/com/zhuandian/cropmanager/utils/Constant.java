@@ -6,5 +6,5 @@ package com.zhuandian.cropmanager.utils;
  * data：2018/12/28
  */
 public class Constant {
-    public static final String APP_ID="00d13d393b35eac7e23c3077d1c787ca";
+    public static final String APP_ID="3b3a8173f7d02cc1222afb432eee0868";
 }
