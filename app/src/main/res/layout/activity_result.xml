@@ -6,4 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".ResultAcitivity">
 
+    <TextView
+        android:id="@+id/tv_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="未查询到对应的农作物施肥方案..."
+        android:textSize="18sp" />
+
 </android.support.constraint.ConstraintLayout>
