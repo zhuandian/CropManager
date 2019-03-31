@@ -60,13 +60,10 @@ public class MainActivity extends BaseActivity {
                 Toast.makeText(MainActivity.this, "正在重新获取PH值...", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.tv_search:
-
                 Intent intent = new Intent(MainActivity.this, ResultAcitivity.class);
                 intent.putExtra("ph", phLevel);
                 intent.putExtra("crop_name", etCropName.getText().toString());
                 startActivity(intent);
-
-
                 break;
         }
     }
@@ -76,6 +73,8 @@ public class MainActivity extends BaseActivity {
         try {
             //创建一个ServerSocket，port是客户端的端口
             ServerSocket serverSocket = new ServerSocket(9000);
+            String s1 = serverSocket.getInetAddress().toString();
+            System.out.println("-------------------111-" + s1);
             while (true) {
                 //从请求队列中取出链接,如果只接受一次则不用使用while循环
                 Socket socket = serverSocket.accept();
@@ -87,7 +86,7 @@ public class MainActivity extends BaseActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        tvRefreshPh.setText(clientContent);
+                        tvPhLevel.setText(clientContent.split("=")[0]);
 //                        phLevel = clientContent
                     }
                 });
