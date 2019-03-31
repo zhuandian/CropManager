@@ -30,7 +30,7 @@ public class MainActivity extends BaseActivity {
     EditText etCropName;
     @BindView(R.id.tv_search)
     TextView tvSearch;
-    private int phLevel = 0;
+    private double phLevel = 0.0;
 
     @Override
     protected int getLayoutId() {

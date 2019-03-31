@@ -20,7 +20,7 @@ public class ResultAcitivity extends BaseActivity {
 
     @BindView(R.id.tv_message)
     TextView tvMessage;
-    private int phLevel;
+    private double phLevel;
     private String cropName;
 
     @Override
@@ -30,7 +30,7 @@ public class ResultAcitivity extends BaseActivity {
 
     @Override
     protected void setUpView() {
-        phLevel = getIntent().getIntExtra("ph", 0);
+        phLevel = getIntent().getDoubleExtra("ph", 0);
         cropName = getIntent().getStringExtra("crop_name");
 
         BmobQuery<CropEntity> query = new BmobQuery<>();
