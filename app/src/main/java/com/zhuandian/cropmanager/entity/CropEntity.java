@@ -9,8 +9,8 @@ import cn.bmob.v3.BmobObject;
  */
 public class CropEntity extends BmobObject {
     private String cropName;
-    private int phMin;
-    private int phMax;
+    private float phMin;
+    private float phMax;
     private String phMinHuaFei;
     private String phMaxHuaFei;
 
@@ -39,19 +39,19 @@ public class CropEntity extends BmobObject {
         this.cropName = cropName;
     }
 
-    public int getPhMin() {
+    public float getPhMin() {
         return phMin;
     }
 
-    public void setPhMin(int phMin) {
+    public void setPhMin(float phMin) {
         this.phMin = phMin;
     }
 
-    public int getPhMax() {
+    public float getPhMax() {
         return phMax;
     }
 
-    public void setPhMax(int phMax) {
+    public void setPhMax(float phMax) {
         this.phMax = phMax;
     }
 }
